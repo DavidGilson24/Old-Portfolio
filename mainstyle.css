@@ -1,0 +1,349 @@
+@font-face 
+{
+    font-family: 'Architekt-regular';
+    src: url(assets/fonts/NBArchitektStd/NBArchitektStd-Light.otf);
+}
+
+@font-face {
+    font-family: 'NB-regular';
+    src: url(assets/fonts/NBArchitektStd/NB\ International\ Regular.otf);
+}
+
+*
+{
+    font-family: 'Architekt-regular', sans-serif;
+}
+
+body
+{
+    background-color: black;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.no-scroll 
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+.navbar
+{
+    background-color: none;
+    background: none;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: LoadIn 3s;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 1.5em;
+}
+
+.link-aboutme
+{
+    color: white;
+    font-size: 1.1em;
+    padding: 0.4em;
+    background-image: linear-gradient(90deg, black, gray);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.4s ease;
+}
+
+.link-aboutme:hover
+{
+    background-size: 100% 3px;
+}
+
+.link-projects
+{
+    color: white;
+    font-size: 1.1em;
+    padding: 0.4em;
+    background-image: linear-gradient(90deg, black, gray);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.4s ease;
+}
+
+.link-projects:hover
+{
+    background-size: 100% 3px;
+}
+
+.link-contact
+{
+    color: white;
+    font-size: 1.1em;
+    padding: 0.4em;
+    background-image: linear-gradient(90deg, black, gray);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.4s ease;
+}
+
+.link-contact:hover
+{
+    background-size: 100% 3px;
+}
+
+.background-video-light
+{
+    top: 0;
+    right: 0;
+    position: absolute;
+    opacity: 1;
+    animation: LoadIn 3s;
+}
+
+#to-top 
+{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999; 
+}
+
+.arrow-to-top 
+{
+    font-size: 2em;
+    color: white;
+    padding-top: 0.2em;
+}
+
+.main-image
+{
+    position:absolute;
+    max-width: 58%;
+    margin-top: 17vh;
+    padding-left: 75vh;
+
+}
+
+.overlay-text
+{
+    position: absolute;
+    object-fit: cover;
+    animation: LoadIn 3s;
+    margin-top: 55vh;
+    padding-left: 3em;
+    margin-bottom: -10em;
+}
+
+.name 
+{
+    color: white;
+    font-size: 6em;
+}
+
+/* .type-element
+{
+    font-family: 'NB-regular', 'sans-serif';
+    background: -webkit-linear-gradient(white ,gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+*/
+
+.typing
+{
+    background: -webkit-linear-gradient(white ,gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -1.7em;
+    font-size: 2.5em;
+}
+
+.blue-purple-theme
+{
+    background: -webkit-linear-gradient(white ,gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.icons
+{
+    margin-top: -2em;
+}
+
+.linkedin
+{
+    color: white;
+    font-size: 50px;
+    margin-right: 0.5em;
+    transition: 0.3s;
+}
+
+.linkedin:hover
+{
+    color: #0077b5;
+}
+
+.github
+{
+    color: white;
+    font-size: 50px;
+    margin-right: 0.5em;
+    transition: 0.3s;
+}
+
+.github:hover
+{
+    transition: 0.3s;
+    color: rgb(126, 117, 117);
+}
+
+.dribble
+{
+    color: white;
+    font-size: 50px;
+    margin-right: 0.5em;
+    transition: 0.3s;
+}
+
+.dribble:hover
+{
+    transition: 0.3s;
+    color: orange;
+}
+
+a:link 
+{
+    text-decoration: none;
+}
+
+a:visited 
+{
+    text-decoration: none;
+}
+
+.separate-title
+{
+    padding: 27em;
+    box-sizing: border-box;
+    box-shadow: transparent;
+    color: transparent;
+}
+
+.about-section
+{
+    margin-bottom: -1em;
+}
+
+.about-title
+{
+    color: aliceblue;
+    padding-top: 3.5em;
+    margin-left: 36vw;
+    margin-bottom: 0.3em;
+    font-size: 5em;
+    position: relative;
+    display: inline-block;
+}
+
+/* .about-title::after 
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 6px;  
+    background: linear-gradient(to right, black ,gray);
+    width: 100%;
+} */
+
+.about-para
+{
+    /* font-family: 'NB-regular', 'sans-serif'; */
+    color: aliceblue;
+    font-size: 1.6em;
+    margin-left: 8em;
+    margin-right: 8em;
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.separate-title2
+{
+    padding: 5em;
+    box-sizing: border-box;
+    box-shadow: transparent;
+    color: transparent;
+}
+
+/* .projects-title
+{
+    color: aliceblue;
+    margin-left: 42vw;
+    margin-bottom: 0.3em;
+    font-size: 5em;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-title::after 
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 6px;  
+    background: linear-gradient(to right, black ,gray);
+    width: 100%;
+} */
+
+.sl-img
+{
+    margin-left: 5.5vw;
+    max-width: 90%;
+}
+
+.sl-video
+{
+    margin-left: 8vw;
+    margin-top: -8em;
+}
+
+
+@keyframes LoadIn
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut 
+{
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
