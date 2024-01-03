@@ -60,7 +60,7 @@ function handleAboutMeOpacity()
 
 function handleProjectsOpacity() 
 {
-    const fadeThreshold = projects.offsetTop - window.innerHeight + 750;
+    const fadeThreshold = projects.offsetTop - window.innerHeight + 300;
         
     if (window.scrollY > fadeThreshold) 
     {

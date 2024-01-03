@@ -32,6 +32,7 @@ html, body {
 
 .navbar
 {
+    /* border-bottom: 1px solid #ffffff; */
     background-color: none;
     background: none;
     z-index: 1;
@@ -41,6 +42,19 @@ html, body {
     animation: LoadIn 3s;
 }
 
+/* .navbar::after 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff; 
+    width: calc(100vw - 40px); 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}*/
+
 .navbar ul li
 {
     list-style: none;
@@ -48,64 +62,50 @@ html, body {
     margin: 1.5em;
 }
 
-.link-aboutme
+@keyframes blink 
 {
-    color: white;
-    font-size: 1.1em;
-    padding: 0.4em;
-    background-image: linear-gradient(90deg, black, gray);
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 0.4s ease;
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-.link-aboutme:hover
+.navbar a:hover:after 
 {
-    background-size: 100% 3px;
+    content: '';
+    display: inline-block;
+    width: 8px; /* Width of the cursor */
+    height: 1em; /* Height to match the text */
+    background-color: white; /* Color of the cursor */
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    right: 5px; /* Distance from the right edge of the link element */
+    bottom: 0; /* Aligns with the bottom of the text */
+    margin-left: 5px; /* Adjust the space between the text and cursor */
+}
+
+.navbar a 
+{
+    overflow: visible;
+    position: relative;
+    padding-right: 20px; /* Space for cursor */
+}
+
+
+.link-aboutme
+{
+    color: aliceblue;
+    font-size: 1.1em;
 }
 
 .link-projects
 {
-    color: white;
+    color: aliceblue;
     font-size: 1.1em;
-    padding: 0.4em;
-    background-image: linear-gradient(90deg, black, gray);
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 0.4s ease;
-}
-
-.link-projects:hover
-{
-    background-size: 100% 3px;
 }
 
 .link-contact
 {
-    color: white;
+    color: aliceblue;
     font-size: 1.1em;
-    padding: 0.4em;
-    background-image: linear-gradient(90deg, black, gray);
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 0.4s ease;
-}
-
-.link-contact:hover
-{
-    background-size: 100% 3px;
-}
-
-.background-video-light
-{
-    top: 0;
-    right: 0;
-    position: absolute;
-    opacity: 1;
-    animation: LoadIn 3s;
 }
 
 #to-top 
@@ -125,16 +125,16 @@ html, body {
 .arrow-to-top 
 {
     font-size: 2em;
-    color: white;
+    color: aliceblue;
     padding-top: 0.2em;
 }
 
 .main-image
 {
     position:absolute;
-    max-width: 58%;
-    margin-top: 17vh;
-    padding-left: 75vh;
+    max-width:40vw;
+    margin-top: 5vh;
+    padding-left: 95vh;
 
 }
 
@@ -150,31 +150,22 @@ html, body {
 
 .name 
 {
-    color: white;
+    color: aliceblue;
     font-size: 6em;
 }
 
-/* .type-element
-{
-    font-family: 'NB-regular', 'sans-serif';
-    background: -webkit-linear-gradient(white ,gray);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} 
-*/
-
 .typing
 {
-    background: -webkit-linear-gradient(white ,gray);
+    background: -webkit-linear-gradient(aliceblue ,gray);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: -1.7em;
     font-size: 2.5em;
 }
 
-.blue-purple-theme
+.gray-white-theme
 {
-    background: -webkit-linear-gradient(white ,gray);
+    background: -webkit-linear-gradient(aliceblue ,gray);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -187,7 +178,7 @@ html, body {
 
 .linkedin
 {
-    color: white;
+    color: aliceblue;
     font-size: 50px;
     margin-right: 0.5em;
     transition: 0.3s;
@@ -200,7 +191,7 @@ html, body {
 
 .github
 {
-    color: white;
+    color: aliceblue;
     font-size: 50px;
     margin-right: 0.5em;
     transition: 0.3s;
@@ -214,7 +205,7 @@ html, body {
 
 .dribble
 {
-    color: white;
+    color: aliceblue;
     font-size: 50px;
     margin-right: 0.5em;
     transition: 0.3s;
@@ -224,6 +215,20 @@ html, body {
 {
     transition: 0.3s;
     color: orange;
+}
+
+.youtube
+{
+    color: aliceblue;
+    font-size: 50px;
+    margin-right: 0.5em;
+    transition: 0.3s;
+}
+
+.youtube:hover
+{
+    transition: 0.3s;
+    color: red;
 }
 
 a:link 
@@ -260,21 +265,8 @@ a:visited
     display: inline-block;
 }
 
-/* .about-title::after 
-{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 6px;  
-    background: linear-gradient(to right, black ,gray);
-    width: 100%;
-} */
-
 .about-para
 {
-    /* font-family: 'NB-regular', 'sans-serif'; */
     color: aliceblue;
     font-size: 1.6em;
     margin-left: 8em;
@@ -285,46 +277,125 @@ a:visited
 
 .separate-title2
 {
-    padding: 5em;
+    padding: 10em;
     box-sizing: border-box;
     box-shadow: transparent;
     color: transparent;
 }
 
-/* .projects-title
+.sl-border
 {
-    color: aliceblue;
-    margin-left: 42vw;
-    margin-bottom: 0.3em;
-    font-size: 5em;
     position: relative;
-    display: inline-block;
+    padding-bottom: 2em;
 }
 
-.projects-title::after 
+.sl-border::before 
 {
-    content: "";
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 6px;  
-    background: linear-gradient(to right, black ,gray);
-    width: 100%;
-} */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
 
-.sl-img
-{
-    margin-left: 5.5vw;
-    max-width: 90%;
+.sl-border::after {
+    content: '> SOLAR ATLAS';
+    position: absolute;
+    top: 12px; 
+    left: 5vw;
+    font-size: 1.3em;
+    color: aliceblue;
 }
 
 .sl-video
 {
+    position: absolute;
     margin-left: 8vw;
-    margin-top: -8em;
+    margin-top: 7em;
+    width: 40vw;
+    height: 42vh;
 }
 
+.sl-text
+{
+    color: aliceblue;
+    text-align: left;
+    font-size: 1.8vw;
+    padding-left: 50vw;
+}
+
+/* .sl-border-gallery
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.sl-border-gallery::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.sl-border-gallery::after {
+    content: '> Gallery';
+    position: absolute;
+    top: 12px; 
+    left: 5vw;
+    font-size: 1.3em;
+    color: aliceblue;
+} */
+
+.contact-title
+{
+    color: aliceblue;
+    
+}
+
+.welcome-screen 
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: aliceblue;
+    opacity: 1;
+    z-index: 1000;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* .moon-gallery
+{
+    max-width: 30vw;
+    height: auto;
+}
+
+.earth-gallery
+{
+    max-width: 30vw;
+    height: auto;
+}
+
+.mars-gallery
+{
+    max-width: 30vw;
+    height: auto;
+} */
 
 @keyframes LoadIn
 {
