@@ -92,15 +92,23 @@ function handleContactOpacity()
     }
 }
 
-handleNavBarOpacity();
-handleTitlePageOpacity();
-handleAboutMeOpacity();
-handleProjectsOpacity();
-handleContactOpacity();
+if (window.innerWidth <= 450 || window.innerWidth <= 950) {
+    welcomeScreen.classList.add('no-animation');
+}
+else
+{
+    handleNavBarOpacity();
+    handleTitlePageOpacity();
+    handleAboutMeOpacity();
+    handleProjectsOpacity();
+    handleContactOpacity();
 
-window.addEventListener("scroll", handleNavBarOpacity);
-window.addEventListener("scroll", handleTitlePageOpacity);
-window.addEventListener("scroll", handleAboutMeOpacity);
-window.addEventListener("scroll", handleProjectsOpacity);
-window.addEventListener("scroll", handleContactOpacity);
+    window.addEventListener("scroll", handleNavBarOpacity);
+    window.addEventListener("scroll", handleTitlePageOpacity);
+    window.addEventListener("scroll", handleAboutMeOpacity);
+    window.addEventListener("scroll", handleProjectsOpacity);
+    window.addEventListener("scroll", handleContactOpacity);
+}
+
+
 
