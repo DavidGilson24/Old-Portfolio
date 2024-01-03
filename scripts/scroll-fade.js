@@ -2,11 +2,13 @@ const navBar = document.getElementById("NavBar");
 const titlePage = document.getElementById("TitlePage");
 const aboutMe = document.getElementById("AboutMe");
 const projects = document.getElementById("Projects");
+const contact = document.getElementById("Contact");
             
 navBar.style.transition = "opacity 0.5s ease-in-out";
 titlePage.style.transition = "opacity 0.5s ease-in-out";
 aboutMe.style.transition = "opacity 0.35s ease-in-out";
 projects.style.transition = "opacity 0.35s ease-in-out";
+contact.style.transition = "opacity 0.35s ease-in-out";
 
 function handleNavBarOpacity() 
 {
@@ -74,13 +76,31 @@ function handleProjectsOpacity()
     }
 }
 
+function handleContactOpacity() 
+{
+    const fadeThreshold = contact.offsetTop - window.innerHeight + 300;
+        
+    if (window.scrollY > fadeThreshold) 
+    {
+        const opacity = 1 - (fadeThreshold - window.scrollY) / 600;
+        contact.style.opacity = opacity;
+    }
+
+    else
+    {
+        contact.style.opacity = 0;
+    }
+}
+
 handleNavBarOpacity();
 handleTitlePageOpacity();
 handleAboutMeOpacity();
 handleProjectsOpacity();
+handleContactOpacity();
 
 window.addEventListener("scroll", handleNavBarOpacity);
 window.addEventListener("scroll", handleTitlePageOpacity);
 window.addEventListener("scroll", handleAboutMeOpacity);
 window.addEventListener("scroll", handleProjectsOpacity);
+window.addEventListener("scroll", handleContactOpacity);
 
