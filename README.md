@@ -16,8 +16,8 @@ Welcome to my website portfolio! This portfolio is designed to highlight my expe
 
 - Responsive and simplistic design.
 - Clean and minimalist layout
-- Detailed information about my experience with various programming languages and technologies
-- Sections to showcase my projects, education, and certifications
+- Information about my experience with various programming languages and technologies
+- Project showcase and details
 - Contact information for reaching out to me
 
 ## Technologies
@@ -27,10 +27,8 @@ The portfolio website is built using the following technologies:
 - HTML5
 - CSS3
 - JavaScript
+- EmailJS
 
 ## Sources
 
 Social icons by IONICONS. Free of use and licensed by MIT:
- - "Ionicons is a completely open-source icon set with 1,300 icons crafted for web, iOS, Android, and desktop apps. 
-    Ionicons was made for Ionic Framework, a cross-platform hybrid and Progressive Web App framework."
- - "Use them wherever you see fit, personal or commercial. They are free to use and licensed under MIT."
