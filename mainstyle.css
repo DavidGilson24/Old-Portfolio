@@ -15,7 +15,15 @@
 }
 
 body
-{
+{ 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    background-color: black;
+}
+
+body::-webkit-scrollbar
+{ 
+    display: none; 
     background-color: black;
 }
 
@@ -344,11 +352,12 @@ a:visited
 .contact-title
 {
     color: aliceblue;
-    margin-left: 38vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     margin-bottom: 0.3em;
     font-size: 5em;
     position: relative;
-    display: inline-block;
 }
 
 .contact-container
@@ -437,7 +446,120 @@ form
     justify-content: center;      
 }
 
-@media only screen and (max-width: 950px) /* iPHONE STANDING*/
+@media only screen and (max-width: 1400px) /* iPAD AIR LAYING*/
+{
+    #to-top 
+    {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border-radius: 40%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9999; 
+    }
+
+    .sl-text1
+    {
+        font-size: 2em;
+    }
+
+    .sl-text2
+    {
+        position: absolute;
+        padding-top: 11em;
+        color: aliceblue;
+        text-align: left;
+        font-size: 2em;
+        padding-left: 5vw;
+
+    }
+
+    .sl-image
+    {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 20em;
+        max-width: 45%;
+        height: auto;
+    }
+
+    .separate-title3
+    {
+        padding-top: 35em;
+    }
+
+    .contact-info
+    {
+        font-size: 1.2em;
+    }
+
+}
+
+@media only screen and (max-width: 1050px) /* iPAD AIR STANDING*/
+{
+    #to-top 
+    {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border-radius: 40%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9999; 
+    }
+
+    .main-image
+    {
+        padding-top: 10em;
+        max-width: 50%;
+        padding-left: 20em;
+    }
+
+    .sl-text1
+    {
+        font-size: 2em;
+    }
+
+    .sl-text2
+    {
+        position: absolute;
+        padding-top: 10em;
+        color: aliceblue;
+        text-align: left;
+        font-size: 2em;
+        padding-left: 5vw;
+
+    }
+
+    .sl-image
+    {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 0vw;
+        max-width: 50%;
+        height: auto;
+    }
+
+    .separate-title3
+    {
+        padding-top: 30em;
+    }
+
+    .contact-info
+    {
+        font-size: 1.2em;
+    }
+
+}
+
+@media only screen and (max-width: 950px) /* iPHONE LAYING*/
 {
     #to-top 
     {
@@ -545,6 +667,146 @@ form
         color: aliceblue;
         text-align: left;
         font-size: 1em;
+    }
+
+    .separate-title3
+    {
+        padding: 0em;
+        padding-bottom: 40em;
+    }
+
+    .contact-title
+    {
+        color: aliceblue;
+        margin-left: 0em;
+        margin-bottom: 0.3em;
+        font-size: 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-info
+    {
+        color: aliceblue;
+        font-size: 0.9em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;      
+    }
+}
+
+@media only screen and (max-width: 850px) /* iPAD MINI*/
+{
+    #to-top 
+    {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border-radius: 40%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9999; 
+    }
+
+    .name 
+    {
+        color: aliceblue;
+        font-size: 4em;
+    }
+
+    .navbar ul li 
+    {
+        margin: 1em;
+    }
+
+    .separate-title
+    {
+        padding: 0em;
+        padding-bottom: 45em;
+    }
+
+    .main-image
+    {
+        position:absolute;
+        max-width:50%;
+        padding-top: 5%;
+        display: flex;
+        justify-content: center;
+        padding-top: 5em;
+        padding-left: 15em;
+    }
+
+    .about-title
+    {
+        color: aliceblue;
+        padding-top: 3.5em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.3em;
+        font-size: 2.3em;
+        position: relative;
+    }
+
+    .about-para
+    {
+        color: aliceblue;
+        font-size: 1.2em;
+        margin-top: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .separate-title2
+    {
+        padding: 0em;
+        padding-bottom: 2em;
+    }
+
+    .sl-video
+    {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 50%;
+        height: 30%;
+    }
+
+    .sl-text1
+    {
+        padding-left: 1em;
+        margin-top: 25em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 1.2em;
+    }
+
+    .sl-image
+    {
+        width: 50%;
+        height: auto;
+        margin-top: 2em;
+        margin-left: 2em;
+        max-width: 100%;
+    }
+
+    .sl-text2
+    {
+        margin-top: 15em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 1.2sem;
     }
 
     .separate-title3
@@ -693,7 +955,7 @@ form
     .separate-title3
     {
         padding: 0em;
-        padding-bottom: 30em;
+        padding-bottom: 38em;
     }
 
     .contact-title
@@ -718,7 +980,150 @@ form
     }
 }
 
-@media only screen and (max-width: 380px) /* iPHONE STANDING*/
+@media only screen and (max-width: 412px) /* iPHONE STANDING*/
+{
+    #to-top 
+    {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border-radius: 40%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9999; 
+    }
+
+    #welcome-screen {
+        display: none !important;
+    }
+
+    .name 
+    {
+        color: aliceblue;
+        font-size: 4em;
+    }
+
+    .navbar ul li 
+    {
+        margin: 1em;
+    }
+
+    .separate-title
+    {
+        padding: 0em;
+        padding-bottom: 50em;
+    }
+
+    .main-image
+    {
+        position:absolute;
+        max-width:60%;
+        padding-top: 45%;
+        display: flex;
+        justify-content: left;
+        padding-left: 5em;
+    }
+
+    .about-title
+    {
+        color: aliceblue;
+        padding-top: 3.5em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.3em;
+        font-size: 2.3em;
+        position: relative;
+    }
+
+    .about-para
+    {
+        color: aliceblue;
+        font-size: 1.2em;
+        margin-top: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .separate-title2
+    {
+        padding: 0em;
+        padding-bottom: 5em;
+    }
+
+    .sl-video
+    {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 80%;
+        height: 40%;
+    }
+
+    .sl-text1
+    {
+        padding-left: 1em;
+        margin-top: 30em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .sl-image
+    {
+        width: 70%;
+        height: auto;
+        margin-top: 2em;
+        margin-left: 2em;
+        max-width: 100%;
+    }
+
+    .sl-text2
+    {
+        margin-top: 11em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .separate-title3
+    {
+        padding: 0em;
+        padding-bottom: 39em;
+    }
+
+    .contact-title
+    {
+        color: aliceblue;
+        margin-left: 0em;
+        margin-bottom: 0.3em;
+        font-size: 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-info
+    {
+        color: aliceblue;
+        font-size: 0.9em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;      
+    }
+}
+
+@media only screen and (max-width: 380px) /* iPHONE (SMALL) STANDING*/
 {
     #to-top 
     {
@@ -868,7 +1273,184 @@ form
     .separate-title3
     {
         padding: 0em;
+        padding-bottom: 38em;
+    }
+
+    .contact-title
+    {
+        color: aliceblue;
+        margin-left: 0em;
+        margin-bottom: 0.3em;
+        font-size: 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-info
+    {
+        color: aliceblue;
+        font-size: 0.9em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;      
+    }
+}
+
+@media only screen and (max-width: 280px) /* iPHONE (SMALL) STANDING*/
+{
+    #to-top 
+    {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border-radius: 40%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9999; 
+    }
+
+    #welcome-screen {
+        display: none !important;
+    }
+
+    .name 
+    {
+        color: aliceblue;
+        font-size: 3em;
+
+    }
+
+    .linkedin
+    {
+        color: aliceblue;
+        font-size: 20px;
+        margin-right: 0.5em;
+        transition: 0.3s;
+    }
+
+    .github
+    {
+        color: aliceblue;
+        font-size: 20px;
+        margin-right: 0.5em;
+        transition: 0.3s;
+    }
+
+    .dribble
+    {
+        color: aliceblue;
+        font-size: 20px;
+        margin-right: 0.5em;
+        transition: 0.3s;
+    }
+
+    .youtube
+    {
+        color: aliceblue;
+        font-size: 20px;
+        margin-right: 0.5em;
+        transition: 0.3s;
+    }
+
+    .navbar ul li 
+    {
+        font-size: 0.8em;
+        margin: 1em;
+    }
+
+    .separate-title
+    {
+        padding: 0em;
         padding-bottom: 30em;
+    }
+
+    .main-image
+    {
+        position:absolute;
+        max-width:60%;
+        padding-top: 45%;
+        display: flex;
+        justify-content: left;
+        padding-left: 5em;
+    }
+
+    .about-title
+    {
+        color: aliceblue;
+        padding-top: 3.5em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.3em;
+        font-size: 2.3em;
+        position: relative;
+    }
+
+    .about-para
+    {
+        color: aliceblue;
+        font-size: 1.2em;
+        margin-top: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .separate-title2
+    {
+        padding: 0em;
+        padding-bottom: 5em;
+    }
+
+    .sl-video
+    {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 80%;
+        height: 40%;
+    }
+
+    .sl-text1
+    {
+        padding-left: 1em;
+        margin-top: 30em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    .sl-image
+    {
+        width: 70%;
+        height: auto;
+        margin-top: 2em;
+        margin-left: 2em;
+        max-width: 100%;
+    }
+
+    .sl-text2
+    {
+        margin-top: 11em;
+        display: flex;
+        justify-content: left;
+        color: aliceblue;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    .separate-title3
+    {
+        padding: 0em;
+        padding-bottom: 35em;
     }
 
     .contact-title
