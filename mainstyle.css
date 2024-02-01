@@ -14,22 +14,16 @@
     font-family: 'Architekt-regular', sans-serif;
 }
 
+::-webkit-scrollbar
+{ 
+    display: none; 
+}
+
 body
 { 
     -ms-overflow-style: none;  
     scrollbar-width: none;
     background-color: black;
-}
-
-body::-webkit-scrollbar
-{ 
-    display: none; 
-    background-color: black;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
 }
 
 .no-scroll 
@@ -66,21 +60,21 @@ html, body {
 {
     content: '';
     display: inline-block;
-    width: 8px; /* Width of the cursor */
-    height: 1em; /* Height to match the text */
-    background-color: white; /* Color of the cursor */
+    width: 8px; 
+    height: 1em; 
+    background-color: white; 
     animation: blink 1s step-end infinite;
     position: absolute;
-    right: 5px; /* Distance from the right edge of the link element */
-    bottom: 0; /* Aligns with the bottom of the text */
-    margin-left: 5px; /* Adjust the space between the text and cursor */
+    right: 5px; 
+    bottom: 0; 
+    margin-left: 5px;
 }
 
 .navbar a 
 {
     overflow: visible;
     position: relative;
-    padding-right: 20px; /* Space for cursor */
+    padding-right: 20px; 
 }
 
 

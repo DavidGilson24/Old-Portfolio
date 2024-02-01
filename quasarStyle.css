@@ -1,0 +1,123 @@
+@font-face 
+{
+    font-family: 'Architekt-regular';
+    src: url(assets/fonts/NBArchitektStd/NBArchitektStd-Light.otf);
+}
+
+@font-face {
+    font-family: 'NB-regular';
+    src: url(assets/fonts/NBArchitektStd/NB\ International\ Regular.otf);
+}
+
+*
+{
+    font-family: 'Architekt-regular', sans-serif;
+}
+
+body
+{ 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    background-color: black;
+}
+
+body::-webkit-scrollbar
+{ 
+    display: none; 
+    background-color: black;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.no-scroll 
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+.navbar
+{
+    background-color: none;
+    background: none;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: LoadIn 3s;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 1.5em;
+}
+
+@keyframes blink 
+{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.navbar a:hover:after 
+{
+    content: '';
+    display: inline-block;
+    width: 8px; 
+    height: 1em; 
+    background-color: white; 
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    right: 5px; 
+    bottom: 0; 
+    margin-left: 5px;
+}
+
+.navbar a 
+{
+    overflow: visible;
+    position: relative;
+    padding-right: 20px; 
+}
+
+
+.link-portfolio
+{
+    color: aliceblue;
+    font-size: 1.1em;
+}
+
+a:link 
+{
+    text-decoration: none;
+}
+
+a:visited 
+{
+    text-decoration: none;
+}
+
+@keyframes LoadIn
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut 
+{
+    to {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
