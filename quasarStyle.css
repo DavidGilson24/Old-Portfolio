@@ -21,7 +21,7 @@ body
     background-color: black;
 }
 
-body::-webkit-scrollbar
+::-webkit-scrollbar
 { 
     display: none; 
     background-color: black;
@@ -98,6 +98,37 @@ a:link
 a:visited 
 {
     text-decoration: none;
+}
+
+.main-image
+{
+    width: 100%;
+    position: absolute;
+    animation: LoadIn 3s;
+}
+
+.main-title
+{
+    position: absolute;
+    object-fit: cover;
+    animation: LoadIn 3s;
+    margin-top: 39vh;
+    margin-left: 0.4em;
+    font-size: 7.5em;
+    z-index: 1;
+    color: aliceblue;
+}
+
+.sub-title
+{
+    position: absolute;
+    object-fit: cover;
+    animation: LoadIn 3s;
+    margin-top: 52vh;
+    font-size: 2em;
+    margin-left: 2em;
+    z-index: 1;
+    color: aliceblue;
 }
 
 @keyframes LoadIn

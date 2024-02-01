@@ -9,6 +9,11 @@
     src: url(assets/fonts/NBArchitektStd/NB\ International\ Regular.otf);
 }
 
+@font-face {
+    font-family: 'NB-bold';
+    src: url(assets/fonts/NBArchitektStd/NBArchitektStd-Bold.otf);
+}
+
 *
 {
     font-family: 'Architekt-regular', sans-serif;
@@ -335,9 +340,73 @@ a:visited
     height: auto;
 }
 
+.quasar
+{
+    padding-top: 40em;
+}
+
+.quasar-border
+{
+    position: relative;
+    padding-bottom: 5em;
+}
+
+.quasar-border::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.quasar-border::after {
+    content: '> QUASAR CHATBOT';
+    position: absolute;
+    top: 12px; 
+    left: 5vw;
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+.quasar-text1
+{
+    color: aliceblue;
+    text-align: left;
+    font-size: 2.1em;
+    padding-left: 5vw;
+}
+
+.link-quasar 
+{
+    position: absolute;
+    text-align: left;
+    font-size: 2.8em;
+    margin-left: 65vw;
+    margin-top: 4.3em;
+    font-family: 'NB-bold', sans-serif;
+    background: linear-gradient(65deg, #8782F0, #558EF6, #5DC9F7, #DBE3EF, #5C63EB, #0C3EBB, #6A66E1);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 10s linear infinite;
+}
+
+@keyframes rainbow-animation 
+{
+    0% { background-position: 100% 0; }
+    50% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
 .separate-title3
 {
-    padding: 20em;
+    padding: 10em;
     box-sizing: border-box;
     box-shadow: transparent;
     color: transparent;
@@ -489,6 +558,18 @@ form
     .contact-info
     {
         font-size: 1.2em;
+    }
+
+    .quasar
+    {
+        margin-top: 13em;
+        margin-bottom: -5em;
+    }
+
+    .link-quasar
+    {
+        margin-top: 10em;
+        margin-left: 30vw;
     }
 
 }
