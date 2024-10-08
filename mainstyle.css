@@ -14,6 +14,11 @@
     src: url(assets/fonts/NBArchitektStd/NBArchitektStd-Bold.otf);
 }
 
+@font-face {
+    font-family: 'NASA';
+    src: url('assets/fonts/NASA.ttf');
+}
+
 *
 {
     font-family: 'Architekt-regular', sans-serif;
@@ -390,6 +395,70 @@ a:visited
     margin-top: 4.3em;
     font-family: 'NB-bold', sans-serif;
     background: linear-gradient(65deg, #8782F0, #558EF6, #5DC9F7, #DBE3EF, #5C63EB, #0C3EBB, #6A66E1);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 10s linear infinite;
+}
+
+@keyframes rainbow-animation 
+{
+    0% { background-position: 100% 0; }
+    50% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.space-index
+{
+    padding-top: 8em;
+}
+
+.space-index-border
+{
+    position: relative;
+    padding-bottom: 5em;
+}
+
+.space-index-border::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.space-index-border::after {
+    content: '> SPACE INDEX';
+    position: absolute;
+    top: 12px; 
+    left: 5vw;
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+.space-index-text1
+{
+    color: aliceblue;
+    text-align: left;
+    font-size: 2.1em;
+    padding-left: 5vw;
+}
+
+.link-space-index 
+{
+    position: absolute;
+    text-align: left;
+    font-size: 3.5em;
+    margin-left: 70vw;
+    margin-top: 4.3em;
+    font-family: 'NASA', sans-serif;
+    background: linear-gradient(65deg,#DF7145, #F18365, #DBE3EF, #D6946B, #D22029);
     background-size: 400% 100%;
     -webkit-background-clip: text;
     background-clip: text;
